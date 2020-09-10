@@ -1,0 +1,78 @@
+.background__image img {
+  width: 110%;
+  position: relative;
+  left: -5%;
+}
+.signup__form {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  z-index: 999;
+  height: 400px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  height: 60px !important;
+  width: 200px !important;
+  margin-bottom: 20px;
+}
+.form > form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form > form > input {
+  height: 40px;
+  width: 400px;
+  border: none;
+  border-radius: 1px;
+  margin-bottom: 15px;
+  background-color: whitesmoke;
+  padding-left: 30px;
+}
+.form > form > input:focus {
+  outline: none;
+}
+
+Button {
+  background-color: #ff4565 !important;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  width: 90%;
+  margin-top: 10px;
+  color: white !important;
+}
+input {
+  border: 1px solid gray;
+  margin-bottom: 3px;
+}
+.login__link {
+  text-decoration: none !important;
+  margin-top: 10px !important;
+  color: tomato !important;
+}
+#toast-container {
+  position: absolute !important;
+  top: 30px !important;
+  right: auto !important;
+  left: 42% !important;
+  z-index: 456 !important;
+  color: white !important;
+  height: 40px;
+  width: 240px;
+  overflow: hidden !important;
+  text-align: center !important;
+  font-size: 24px !important;
+}
+.green {
+  color: green !important;
+}
+.red {
+  color: #c62828 !important;
+}

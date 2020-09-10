@@ -1,0 +1,100 @@
+.food__detail {
+  display: flex !important;
+  flex-direction: row !important;
+}
+.food__detail__left {
+  display: flex;
+  flex: 0.5;
+  text-align: left;
+  margin-top: 3%;
+}
+.food__description {
+  margin-left: 10%;
+  width: 540px;
+}
+.food__name > h1 {
+  margin-bottom: 20px;
+}
+.priceAndButton {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.food__price {
+  margin-right: 20px;
+}
+
+.quantity__button {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 5px;
+  height: 35px;
+  width: 80px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  align-items: center;
+  cursor: pointer;
+  overflow-y: hidden;
+  background-color: gray !important;
+  color: white;
+  align-items: center;
+}
+.quantity__button .minus__button {
+  margin-top: -1px;
+  width: 20px;
+  border: none !important;
+  background-color: white;
+  color: white !important;
+  font-size: 24px;
+  background-color: gray !important;
+}
+antity__button .quantitiy_number {
+  color: white !important;
+  font-size: 24px;
+  z-index: 66;
+  font-weight: 800;
+}
+.minus__button:focus,
+.plus__button:focus {
+  outline: none;
+}
+
+.quantity__button .plus__button {
+  margin-top: 0px;
+  width: 20px;
+  border: none !important;
+  background-color: white;
+  color: red !important;
+  font-size: 24px;
+  background-color: gray !important;
+}
+.food__detail__right {
+  flex: 0.5;
+}
+.food__detail__right img {
+  margin-left: 10%;
+  height: 400px;
+}
+.add__button {
+  margin-top: 20px;
+  height: 40px !important;
+  width: 100px !important;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  background-color: red;
+  border-radius: 20px;
+  color: white;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+.add__text {
+  margin-bottom: 3px;
+}
+.food__sample__images img {
+  margin-top: 20px;
+  height: 120px;
+  width: 120px;
+}

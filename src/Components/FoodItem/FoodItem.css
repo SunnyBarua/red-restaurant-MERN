@@ -1,0 +1,49 @@
+.food__item {
+  padding: 40px;
+  margin: 0px auto;
+  width: 80%;
+  background-color: #f8f9fa;
+  display: flex;
+}
+.card {
+  height: 360px;
+  width: 400px;
+  margin: 10px;
+  border-radius: 10px;
+  overflow-y: hidden;
+}
+.food__image {
+  margin-top: 20px;
+  margin-left: 18%;
+  display: flex;
+}
+.food__image img {
+  height: 190px;
+  width: 200px;
+}
+.food__item .food__details {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.food__details .food__name {
+  display: flex;
+  margin-bottom: 10px;
+}
+.food__details .shortDescription {
+  display: flex;
+}
+
+.price {
+  display: flex;
+  margin-top: 5px !important;
+}
+.food__details > h3 {
+  text-align: center;
+}
+.card:hover {
+  background-color: #dfe0e1;
+  transition: ease-in 0.5s;
+}

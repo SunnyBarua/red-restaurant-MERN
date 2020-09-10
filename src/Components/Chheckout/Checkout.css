@@ -1,0 +1,40 @@
+.checkout__products__info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: -20px;
+}
+
+.checkout {
+  padding: 20px 50px;
+  margin-top: 10px;
+  background-color: white;
+  height: max-content;
+  width: 75%;
+  overflow-y: none;
+  margin-left: 10px;
+}
+.table__name {
+}
+ul {
+  display: flex;
+  flex-direction: row;
+}
+ul li {
+  padding-right: 100px;
+}
+.product {
+  display: flex;
+}
+.quantity {
+  display: flex;
+
+  margin-top: -5px;
+}
+.price {
+  display: flex;
+  margin-top: -10px;
+}
+.product h3 {
+  margin-bottom: 25px;
+}

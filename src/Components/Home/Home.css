@@ -1,0 +1,141 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+}
+.home__banner {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.home__banner img {
+  height: 70vh;
+  width: 107vw;
+  position: absolute;
+  left: -60px;
+  overflow-x: hidden;
+}
+.title__search {
+  object-fit: contain;
+  position: absolute;
+  left: 35%;
+  top: 15%;
+  margin: 20px auto;
+}
+.searching__portion {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.searching__portion input {
+  height: 52px;
+  width: 370px;
+  background-color: white;
+  border-radius: 50px;
+  border: none;
+}
+.searching__portion input:focus {
+  outline: none;
+}
+.inp {
+  padding-left: 30px;
+}
+.searching__portion button {
+  margin-left: -10%;
+  height: 50px;
+  width: 120px;
+  background-color: #ff4565;
+  border-radius: 50px;
+  border: none;
+}
+.searching__portion button:focus {
+  outline: none;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu .nav__link {
+  padding: 10px;
+  align-items: center;
+  margin-right: 20px;
+  border: none;
+  background-color: none !important;
+}
+.menu .nav__link:first-child {
+  margin-right: 15px;
+}
+
+.menu .active::after {
+  content: "";
+
+  margin: 0;
+  height: 3px;
+  background-color: rgb(255, 69, 101);
+  display: block;
+}
+.menu .nav__link:hover {
+  cursor: pointer;
+}
+.selected__food__item {
+  margin: 0 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.selected__food__item .link {
+  text-decoration: none !important;
+  color: black;
+}
+.home__checkout__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home__checkout__button Button.active {
+  height: 40px;
+  width: 250px;
+  background-color: #ff4565;
+  color: white;
+  border-radius: 20px;
+}
+.home__checkout__button Button.deactive {
+  height: 40px;
+  width: 250px;
+  background-color: gray !important;
+  color: white;
+  border-radius: 20px;
+}
+.home__introduction {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 40px;
+  margin-left: 8%;
+}
+.home__introduction__top {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 40%;
+  height: 150px;
+}
+.home__introduction__top h1 {
+  margin-bottom: 10px;
+}
+.home__introduction__bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.home__introduction__bottom img {
+  height: 300px;
+  width: 95%;
+}
+.home__introduction__bottom img:hover {
+  transform: scaleY(1.02);
+  border-radius: 20px;
+}

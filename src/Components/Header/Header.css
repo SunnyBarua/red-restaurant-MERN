@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+  justify-content: space-between;
+}
+.header__left img {
+  padding: 20px;
+  height: 60px;
+  width: 130px;
+}
+.header__left {
+  display: flex;
+  flex: 0.8;
+}
+.header__right {
+  align-items: center;
+  margin-right: 0px;
+  display: flex;
+  flex: 0.2;
+  justify-content: space-evenly;
+}
+.header__right button {
+  background-color: #ff4565;
+  height: 40px;
+  width: 80px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+}
+.header__right button:focus {
+  outline: none;
+}
+.header__right .nav-link {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}
+.header__shop {
+  font-weight: 700;
+  font-size: 14px;
+  position: absolute;
+  margin-top: -10px;
+  margin-left: -3px;
+}
+.checkout__link {
+  text-decoration: none !important;
+  background-color: none !important;
+}
+.shop__link {
+  text-decoration: none !important;
+}
