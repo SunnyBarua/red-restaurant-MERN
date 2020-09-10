@@ -42,7 +42,7 @@ function Login() {
         } else {
           localStorage.setItem("jwt", data.token);
           localStorage.setItem("user", JSON.stringify(data.user));
-          dispatch({ type: "USER", user: data.user.name });
+          dispatch({ type: "USER", user: data.user });
 
           M.toast({
             html: "logged in sucess",

@@ -5,9 +5,10 @@ import SubTotal from "../SubTotal/SubTotal";
 import "./Checkout.css";
 
 import { useStateValue } from "../ContextProvider/StateProvider";
+import { Button, Link } from "@material-ui/core";
 function Checkout() {
-  const [{ shop }] = useStateValue();
-  console.log(shop);
+  const [{ shop, user }] = useStateValue();
+  console.log(user);
 
   return (
     <div className="checkout">
@@ -20,38 +21,35 @@ function Checkout() {
           </p>
         </div>
       ) : (
-        <div className="checkout__products__info">
-          <h1> Your Food Ordering list</h1>
-          <div className="table__name">
-            <ul>
-              <li className="product">
-                <h3>Product</h3>
-              </li>
-              <li className="quantity">
-                <h3>Quantity</h3>
-              </li>
-              <li className="price">
-                <h3>Price</h3>
-              </li>
-              <li className="product">
-                <h3>Total</h3>
-              </li>
-            </ul>
+        <div className="checkout_all__details">
+          <div className="checkout__left">
+            <form>
+              <input type="text" value={user?.name} />
+              <input type="email" value={user?.email} />
+              <input type="text" placeholder="Address" />
+              <input type="text" placeholder="Flat ,Suit or Floor" />
+
+              <input type="text" value="Red-Onion Restaurant" />
+
+              <Button className="button">Save & Continue</Button>
+            </form>
           </div>
-          {shop?.map((item) => (
-            <CheckoutProduct
-              id={item.id}
-              name={item.name}
-              image={item.image}
-              price={item.price}
-              quantity={item.quantity}
-              Type={item.Type}
-            />
-          ))}
+          <div className="checkout__right">
+            {shop?.map((item) => (
+              <CheckoutProduct
+                id={item.id}
+                name={item.name}
+                image={item.image}
+                price={item.price}
+                quantity={item.quantity}
+                Type={item.Type}
+              />
+            ))}
+          </div>
         </div>
       )}
       {shop?.length > 0 && (
-        <div className="checkout__right">
+        <div className="checkout__Subtotal">
           <SubTotal />
         </div>
       )}

@@ -84,11 +84,14 @@ antity__button .quantitiy_number {
   justify-content: center;
   display: flex;
   flex-direction: row;
-  background-color: red;
+  background-color: #ff4565;
   border-radius: 20px;
   color: white;
   justify-content: space-evenly;
   cursor: pointer;
+}
+.add__button:focus {
+  outline: none;
 }
 .add__text {
   margin-bottom: 3px;

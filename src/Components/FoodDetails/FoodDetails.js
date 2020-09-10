@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
-import { useParams, Redirect, useHistory } from "react-router";
+import React, { useState, useEffect } from "react";
+import { useParams, useHistory } from "react-router";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 
 import "./FoodDetails.css";
@@ -38,7 +38,7 @@ function FoodDetails() {
   const currentFood = data.find((food) => food._id == id);
   console.log(currentFood);
   const [quantity, setQuantity] = useState(1);
-  const [add, setAdd] = useState(false);
+
   const addFood = (quantity) => {
     setQuantity(quantity);
   };

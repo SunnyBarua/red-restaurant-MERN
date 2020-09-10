@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 import "./CheckoutProduct.css";
 
 import { useStateValue } from "../ContextProvider/StateProvider";
 
 function CheckoutProduct({ name, Type, image, price, id, quantity }) {
-  console.log(id, image);
   const [{ shop }, dispatch] = useStateValue();
+  console.log(shop?.quantity);
   const removeFromOrder = () => {
     dispatch({
       type: "REMOVE_FROM_SHOP",
@@ -14,23 +14,33 @@ function CheckoutProduct({ name, Type, image, price, id, quantity }) {
     });
   };
   return (
-    <div className="checkout__product">
-      <div className="checkoutProduct">
-        <img
-          className="checkoutProduct__image"
-          src={image}
-          alt="product image"
-        />
-        <div className="checkoutProduct__info">
-          <div className="checkoutProduct__name_type">
-            <div className="checkoutProduct__name">{name}</div>
-            <div className="checkoutProduct__type">{Type}</div>
+    <div className="checkout__products">
+      <div className="checkout__all">
+        <div className="checkout__details">
+          <div className="checkoutProductImage">
+            <img
+              className="checkoutProduct__image"
+              src={image}
+              alt="product image"
+            />
           </div>
+          <div className="checkoutProductInfo">
+            <div className="checkoutProduct__info">
+              <div>
+                <div className="checkoutProduct__name_type">
+                  <div className="checkoutProduct__name">{name}</div>
+                </div>
 
-          <div className="checkoutProduct__quantity">{quantity}</div>
-          <div className="checkoutProduct__price">${price}</div>
-          <div className="checkoutProduct__total">$ {price * quantity}</div>
+                <div className="checkoutProduct__total">
+                  <span className="total__price">
+                    ${price} x {quantity}=$ {price * quantity}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
         <div className="remove__button">
           <button onClick={removeFromOrder}>X Remove from Order</button>
         </div>

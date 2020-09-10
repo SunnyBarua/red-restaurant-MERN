@@ -1,68 +1,69 @@
 .checkoutProduct__image {
-  object-fit: contain;
-  width: 180px;
-  height: 180px;
-}
-.checkoutProduct {
-  border-top: 1px solid gray;
   display: flex;
-  flex: 0.7;
+  height: 80px;
+  width: 80px;
 }
-.checkout_product {
-  display: flex !important;
-  flex-direction: row !important;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  flex: 0.6;
-}
-.checkoutProduct__name {
-  font-size: 17px;
-  font-weight: 800;
-  margin-bottom: 10px;
-  width: 180px;
-}
-.checkoutProduct {
-  display: flex;
-}
-.remove__button {
-  display: flex;
-}
-.checkoutProduct__info {
-  padding-left: 20px;
-  display: flex;
-  flex: 0.8;
-}
-.checkoutProduct__name_type {
+.checkout__all {
+  background-color: whitesmoke;
+  height: 120px;
+  width: 360px;
   display: flex;
   flex-direction: column;
-  margin-top: 10%;
+  padding: 20px;
+  margin-bottom: 4px;
+  border-radius: 20px !important;
+  border-top-right-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+}
+
+.checkout__products {
+  display: flex !important;
+  flex-direction: column;
+}
+.checkout__details {
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+}
+.checkoutProduct___right {
+  display: flex;
+}
+.checkoutProduct__left {
+  display: flex;
   text-align: left;
 }
-.checkoutProduct__quantity {
-  padding: 10%;
-  display: flex;
-  flex: 0.06;
+.checkoutProductInfo {
+  margin-left: 10px;
+  width: 200px;
+  margin-top: 3%;
 }
-.checkoutProduct__price {
-  padding: 10%;
+.number__button {
   display: flex;
-  flex: 0.1;
+  flex-direction: row;
+  margin-top: 4%;
+  height: 40px;
 }
-.checkoutProduct__total {
+.checkoutProduct__info {
   display: flex;
-  flex: 0.4;
-  padding-left: 10px;
-  margin-top: 10%;
+  justify-content: center;
+}
+
+.number__button {
+  width: 120px !important;
+  justify-content: center !important;
 }
 .remove__button {
   display: flex;
-  flex: 0.3;
-  padding-top: 4%;
-}
-.remove__button > button {
   height: 40px;
-  width: 160px;
-  border-radius: 0px;
-  padding: 5px;
-  border-radius: 5px;
+  width: 200px;
+  margin: 0 auto;
+}
+.total__price {
+  color: red;
+}
+.checkoutProduct__total {
+  margin-top: 10px;
+}
+.remove__button button:focus {
+  outline: none;
 }

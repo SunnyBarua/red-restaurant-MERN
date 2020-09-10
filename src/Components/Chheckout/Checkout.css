@@ -11,11 +11,9 @@
   background-color: white;
   height: max-content;
   width: 75%;
-  overflow-y: none;
   margin-left: 10px;
 }
-.table__name {
-}
+
 ul {
   display: flex;
   flex-direction: row;
@@ -37,4 +35,40 @@ ul li {
 }
 .product h3 {
   margin-bottom: 25px;
+}
+.checkout_all__details {
+  display: flex;
+  flex-direction: row;
+}
+.checkout__left {
+  display: flex;
+  flex: 0.44;
+  flex-direction: column;
+  width: 40%;
+}
+.checkout__right {
+  display: flex;
+  flex: 0.4;
+  flex-direction: column;
+}
+.checkout__left form {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout__left > form > input {
+  height: 30px;
+  width: 360px;
+  margin-bottom: 10px;
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+.checkout__left > form > input:focus {
+  outline: none !important;
+}
+.checkout__left .button {
+  max-width: 380px !important;
+  padding: 10px 10px;
 }

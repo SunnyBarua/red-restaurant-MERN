@@ -34,7 +34,7 @@ function Header() {
       <div className="header__right">
         <h5 style={{ marginRight: "10px" }}>
           {user && <p>Hi,</p>}
-          {user}
+          {user?.name}
         </h5>
         <Link to="/checkout" className="shop__link">
           <AddShoppingCartIcon />
