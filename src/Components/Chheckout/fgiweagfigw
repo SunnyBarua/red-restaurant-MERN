@@ -1,0 +1,52 @@
+(
+        <div className="checkout_all__details">
+          <div className="checkout__left">
+            <form>
+              <input type="text" defaultValue={user?.name} />
+              <input type="email" defaultValue={user?.email} />
+              <input
+                type="text"
+                defaultValue={address}
+                onChange={(e) => handleChangeAddress(e)}
+                name="Address"
+                placeholder="Address"
+              />
+              <input
+                type="text"
+                defaultValue={flat}
+                onChange={(e) => handleChange(e)}
+                name="Flat, SUit or Floor"
+                placeholder="Flat ,Suit or Floor"
+              />
+
+              <input type="text" value="Red-Onion Restaurant" />
+              {address.length < 1 || flat.length < 1 ? (
+                <Button type="submit" className="button__disabled" disabled>
+                  Save & Continue
+                </Button>
+              ) : (
+                <Button
+                  type="submit"
+                  className="button"
+                  onClick={setIsSavedButton(true)}
+                >
+                  Save & Continue
+                </Button>
+              )}
+            </form>
+          </div>
+          <div className="checkout__right">
+            {shop?.map((item) => (
+              <CheckoutProduct
+                key={Math.random()}
+                id={item.id}
+                name={item.name}
+                image={item.image}
+                price={item.price}
+                quantity={item.quantity}
+                Type={item.Type}
+              />
+            ))}
+          </div>
+        </div>
+      )

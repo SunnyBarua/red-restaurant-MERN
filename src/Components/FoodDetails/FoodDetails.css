@@ -36,21 +36,20 @@
   align-items: center;
   cursor: pointer;
   overflow-y: hidden;
-  background-color: gray !important;
-  color: white;
+  background-color: whitesmoke !important;
+  color: gray;
   align-items: center;
 }
 .quantity__button .minus__button {
   margin-top: -1px;
   width: 20px;
   border: none !important;
-  background-color: white;
-  color: white !important;
+  color: gray !important;
   font-size: 24px;
-  background-color: gray !important;
+  background-color: whitesmoke !important;
 }
 antity__button .quantitiy_number {
-  color: white !important;
+  color: red !important;
   font-size: 24px;
   z-index: 66;
   font-weight: 800;
@@ -64,10 +63,9 @@ antity__button .quantitiy_number {
   margin-top: 0px;
   width: 20px;
   border: none !important;
-  background-color: white;
-  color: red !important;
+  color: gray !important;
   font-size: 24px;
-  background-color: gray !important;
+  background-color: whitesmoke !important;
 }
 .food__detail__right {
   flex: 0.5;
@@ -77,7 +75,7 @@ antity__button .quantitiy_number {
   height: 400px;
 }
 .add__button {
-  margin-top: 20px;
+  margin-top: 30px !important;
   height: 40px !important;
   width: 100px !important;
   align-items: center;
@@ -89,6 +87,9 @@ antity__button .quantitiy_number {
   color: white;
   justify-content: space-evenly;
   cursor: pointer;
+  border-radius: 40px !important;
+  font-size: 18px !important;
+  overflow: hidden;
 }
 .add__button:focus {
   outline: none;
@@ -100,4 +101,24 @@ antity__button .quantitiy_number {
   margin-top: 20px;
   height: 120px;
   width: 120px;
+  margin-left: -2px;
+  margin-right: 10px;
+}
+.shopiing__logo {
+  font-size: 1px !important;
+}
+.message__success {
+  margin-left: 120px;
+  margin-top: -30px;
+  color: green;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+.check__icon {
+  display: flex;
+}
+.message__success .check__icon__text {
+  display: flex;
 }

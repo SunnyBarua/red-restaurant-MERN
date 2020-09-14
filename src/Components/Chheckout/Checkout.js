@@ -1,17 +1,24 @@
-import React, { useContext } from "react";
+import React, { useEffect } from "react";
+import { useForm } from "react-hook-form";
 
 import CheckoutProduct from "../CheckoutProduct/CheckoutProduct";
 import SubTotal from "../SubTotal/SubTotal";
 import "./Checkout.css";
 
 import { useStateValue } from "../ContextProvider/StateProvider";
-import { Button, Link } from "@material-ui/core";
+
 function Checkout() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const { register, handleSubmit, errors } = useForm();
+  const onSubmit = (data) => console.log(data);
   const [{ shop, user }] = useStateValue();
   console.log(user);
 
   return (
-    <div className="checkout">
+    <div className="checkout" key={Math.random()}>
       {shop?.length === 0 ? (
         <div>
           <h2>Your Ordering Food is empty</h2>
@@ -23,20 +30,52 @@ function Checkout() {
       ) : (
         <div className="checkout_all__details">
           <div className="checkout__left">
-            <form>
-              <input type="text" value={user?.name} />
-              <input type="email" value={user?.email} />
-              <input type="text" placeholder="Address" />
-              <input type="text" placeholder="Flat ,Suit or Floor" />
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <input
+                name="name"
+                defaultValue={user.name}
+                ref={register({ required: true })}
+                placeholder="Your Name"
+              />
+              {errors.name && <span className="error">Name is required</span>}
 
-              <input type="text" value="Red-Onion Restaurant" />
+              <input
+                name="email"
+                defaultValue={user.email}
+                ref={register({ required: true })}
+                placeholder="Your Email"
+              />
+              {errors.email && <span className="error">Email is required</span>}
+              <input
+                name="address"
+                ref={register({ required: true })}
+                placeholder="Address"
+              />
+              {errors.address && (
+                <span className="error">Address is required</span>
+              )}
+              <input
+                name="city"
+                ref={register({ required: true })}
+                placeholder="City"
+              />
+              {errors.city && <span className="error">City is required</span>}
+              <input
+                name="zip"
+                ref={register({ required: true })}
+                placeholder="Zip Code"
+              />
+              {errors.zip && (
+                <span className="error">Zip Code is required</span>
+              )}
 
-              <Button className="button">Save & Continue</Button>
+              <input type="submit" className="button__submit" />
             </form>
           </div>
           <div className="checkout__right">
             {shop?.map((item) => (
               <CheckoutProduct
+                key={Math.random()}
                 id={item.id}
                 name={item.name}
                 image={item.image}
@@ -48,6 +87,7 @@ function Checkout() {
           </div>
         </div>
       )}
+
       {shop?.length > 0 && (
         <div className="checkout__Subtotal">
           <SubTotal />

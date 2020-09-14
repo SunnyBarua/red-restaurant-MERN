@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./SignUp.css";
 import Background from "../../Images/bannerbackground.png";
 import logo from "../../Images/logo2.png";
@@ -7,6 +7,9 @@ import { Link, useHistory } from "react-router-dom";
 import M from "materialize-css";
 
 function SignUp() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const history = useHistory();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -56,7 +59,7 @@ function SignUp() {
         <img src={Background} />
         <div className="signup__form">
           <div className="logo">
-            <img className="logo" src={logo} alt="logo" />
+            <img className="logo" src={logo} alt={logo.name} />
           </div>
 
           <div className="form">

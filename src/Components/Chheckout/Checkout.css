@@ -68,7 +68,18 @@ ul li {
 .checkout__left > form > input:focus {
   outline: none !important;
 }
-.checkout__left .button {
+.checkout__left .button__submit {
+  width: 380px !important;
+  height: 40px;
+  background-color: #ff4565;
+  color: white;
+}
+
+.checkout__left .button__disabled {
   max-width: 380px !important;
   padding: 10px 10px;
+  background-color: gray !important;
+}
+.error {
+  color: #ff4565 !important;
 }

@@ -5,8 +5,9 @@ import "./SubTotal.css";
 import { getShopTotal } from "../ContextProvider/reducer";
 
 import { useStateValue } from "../ContextProvider/StateProvider";
+import { Link } from "react-router-dom";
 
-function SubTotal() {
+function SubTotal({ savedButton }) {
   const [{ shop }, dispatch] = useStateValue();
   console.log(shop);
   return (
@@ -30,7 +31,13 @@ function SubTotal() {
         thousandSeparator={true}
         prefix={"$"}
       />
-      <button>Proceed to CheckOut</button>
+      <Link className="payment_link" to="/checkoutform">
+        {savedButton ? (
+          <button>Proceed to CheckOut</button>
+        ) : (
+          <button disabled>Proceed to CheckOut</button>
+        )}
+      </Link>
     </div>
   );
 }

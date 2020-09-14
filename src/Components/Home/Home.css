@@ -95,18 +95,22 @@
   align-items: center;
 }
 .home__checkout__button Button.active {
-  height: 40px;
-  width: 250px;
+  height: 45px;
+  width: 220px;
   background-color: #ff4565;
   color: white;
-  border-radius: 20px;
+  border-radius: 30px;
+  padding: 5px;
+  margin-top: 20px;
 }
 .home__checkout__button Button.deactive {
-  height: 40px;
-  width: 250px;
+  height: 45px;
+  width: 220px;
   background-color: gray !important;
   color: white;
-  border-radius: 20px;
+  border-radius: 30px;
+  padding: 5px;
+  margin-top: 20px;
 }
 .home__introduction {
   margin-top: 5%;

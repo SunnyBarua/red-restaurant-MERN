@@ -14,15 +14,12 @@ function Header() {
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
-    if (user) {
-      history.push("/checkout");
+    if (!user) {
+      history.push("/");
     } else {
-      history.push("/login");
+      history.push("/");
     }
   }, []);
-
-  console.log(shop);
-  console.log(user);
 
   return (
     <div className="header">
@@ -36,18 +33,21 @@ function Header() {
           {user && <p>Hi,</p>}
           {user?.name}
         </h5>
-        <Link to="/checkout" className="shop__link">
+        <Link
+          to={user?.name?.length > 0 ? "/checkout" : "/login"}
+          className="shop__link"
+        >
           <AddShoppingCartIcon />
           <span className="header__shop">{shop?.length}</span>
         </Link>
 
         {user && (
           <Link
+            to="/"
             className="nav-link"
             onClick={() => {
               localStorage.clear();
               dispatch({ type: "CLEAR" });
-              history.push("/");
             }}
           >
             Logout
