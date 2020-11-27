@@ -27,7 +27,7 @@ function Login() {
       M.toast({ html: "invalid email", classes: "red" });
       return;
     }
-    fetch("http://localhost:5000/signin", {
+    fetch("https://red-restaurant-server.herokuapp.com/signin", {
       method: "post",
       headers: {
         "Content-Type": "application/json",

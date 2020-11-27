@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useForm } from "react-hook-form";
+import React, { useEffect, useState } from "react";
+import { useForm, onSubmit } from "react-hook-form";
 
 import CheckoutProduct from "../CheckoutProduct/CheckoutProduct";
 import SubTotal from "../SubTotal/SubTotal";
@@ -8,12 +8,20 @@ import "./Checkout.css";
 import { useStateValue } from "../ContextProvider/StateProvider";
 
 function Checkout() {
+  const [val, setVal] = useState("Submit");
+  const [address, setAddress] = useState("");
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const { register, handleSubmit, errors } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data, e) => {
+    e.preventDefault();
+    console.log(data);
+    setVal("Submited");
+    setAddress(data.address);
+  };
   const [{ shop, user }] = useStateValue();
   console.log(user);
 
@@ -69,7 +77,7 @@ function Checkout() {
                 <span className="error">Zip Code is required</span>
               )}
 
-              <input type="submit" className="button__submit" />
+              <input type="submit" className="button__submit" value={val} />
             </form>
           </div>
           <div className="checkout__right">
@@ -90,7 +98,7 @@ function Checkout() {
 
       {shop?.length > 0 && (
         <div className="checkout__Subtotal">
-          <SubTotal />
+          <SubTotal address={address} />
         </div>
       )}
     </div>

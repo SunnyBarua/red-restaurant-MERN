@@ -18,7 +18,7 @@ function Home() {
   const [food, setFood] = useState([]);
   const [item, setItem] = useState("Breakfast");
   useEffect(() => {
-    fetch("http://localhost:5000/allfood")
+    fetch("https://red-restaurant-server.herokuapp.com/allfood")
       .then((res) => res.json())
       .then((result) => {
         setFood(result.foods);

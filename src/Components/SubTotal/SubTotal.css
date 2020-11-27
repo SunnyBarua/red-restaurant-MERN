@@ -34,3 +34,9 @@
 .payment_link {
   text-decoration: none !important;
 }
+.dis {
+  background-color: gray !important;
+}
+.sub {
+  background-color: tomato !important;
+}

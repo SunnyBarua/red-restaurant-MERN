@@ -7,9 +7,11 @@ import { getShopTotal } from "../ContextProvider/reducer";
 import { useStateValue } from "../ContextProvider/StateProvider";
 import { Link } from "react-router-dom";
 
-function SubTotal({ savedButton }) {
+function SubTotal({ address }) {
   const [{ shop }, dispatch] = useStateValue();
   console.log(shop);
+  console.log(address);
+
   return (
     <div className="subtotal">
       <CurrencyFormat
@@ -32,10 +34,12 @@ function SubTotal({ savedButton }) {
         prefix={"$"}
       />
       <Link className="payment_link" to="/checkoutform">
-        {savedButton ? (
-          <button>Proceed to CheckOut</button>
+        {!address ? (
+          <button disabled className="dis">
+            Proceed to CheckOut
+          </button>
         ) : (
-          <button disabled>Proceed to CheckOut</button>
+          <button className="sub">Proceed to CheckOut</button>
         )}
       </Link>
     </div>
